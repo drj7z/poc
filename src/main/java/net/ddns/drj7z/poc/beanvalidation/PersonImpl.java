@@ -30,7 +30,6 @@ public class PersonImpl implements Person {
   /**
    * @return the firstName
    */
-  @Override
   public String getFirstName()
   {
     return firstName;
@@ -39,7 +38,7 @@ public class PersonImpl implements Person {
   /**
    * @param firstName the firstName to set
    */
-  @Override
+
   public void setFirstName(String firstName)
   {
     this.firstName= firstName;
@@ -48,7 +47,6 @@ public class PersonImpl implements Person {
   /**
    * @return the lastName
    */
-  @Override
   public String getLastName()
   {
     return lastName;
@@ -57,7 +55,6 @@ public class PersonImpl implements Person {
   /**
    * @param lastName the lastName to set
    */
-  @Override
   public void setLastName(String lastName)
   {
     this.lastName= lastName;

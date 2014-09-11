@@ -36,6 +36,7 @@ import org.hibernate.validator.spi.resourceloading.ResourceBundleLocator;
  * template<a href="#[1]">[1]</a>.</li>
  * </ol>
  *
+ * <p>
  * Example:
  * <pre>
  * &commat;NotNull(message="'Firstname' {#messageTemplate}")
@@ -51,8 +52,10 @@ import org.hibernate.validator.spi.resourceloading.ResourceBundleLocator;
  * followed by <i>#</i>) it is only a reference to another string and is
  * <b>not</b> an extension of this implementation but is already managed by
  * original implementation.
+ * </p>
  *
- * <a>[1]</a>&nbsp;Unfortunately after <code>message</code>
+ * <p>
+ * <a name="[1]">[1]</a>&nbsp;Unfortunately after <code>message</code>
  * argument is defined in constraint definition default message template is
  * lost (<code>message</code> defines message template actually). That means
  * that it is not possible retrieve original message template. So what this
@@ -64,6 +67,7 @@ import org.hibernate.validator.spi.resourceloading.ResourceBundleLocator;
  * constraint annotation (example: <i>javax.validation.constraints.NotNull.
  * message</i>)
  * </blockquote>
+ * </P>
  *
  * @author drj7z <drjxzoidberg@gmail.com>
  * @version 1.0.0

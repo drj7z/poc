@@ -8,7 +8,7 @@
   <packaging>jar</packaging>
 
   <name>beanvalidation</name>
-  <url>http://maven.apache.org</url>
+  <url>https://github.com/drj7z/poc/tree/beanvalidation</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -55,4 +55,12 @@
     </plugins>
   </reporting>
 
+  <scm>
+  	<url>https://github.com/drj7z/poc/tree/beanvalidation</url>
+  	<connection>https</connection>
+  	<developerConnection>drj7z</developerConnection>
+  </scm>
+  <issueManagement>
+  	<url>https://github.com/drj7z/poc/issues</url>
+  </issueManagement>
 </project>
