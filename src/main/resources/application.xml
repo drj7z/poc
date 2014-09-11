@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+  <!--  Tag: bean-validation -->
+  <!-- this is how message interpolation can be customized; look at 
+       documentation  and source code from more info. -->
+  <bean id="myMessageInterpolator" 
+        class="net.ddns.drj7z.poc.beanvalidation.MyResourceBundleMessageInterpolator"/>
+
+  <!-- spring will detect hibernate-validator JSR-303 SPI. -->
+  <bean id="validatorFactory"
+        class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+    <property name="messageInterpolator" ref="myMessageInterpolator"/>
+  </bean>
+  
+  <!-- this seems to be needed as we are not using auto-wiring.
+       with auto-wiring enabled it seems that this step is not needed and
+       spring inject validatorFactory.getValidator() to 
+       (javax.validation.Validator).Validator  type -->
+  <!-- TODO: how to skip this step w/o auto-wiring? -->
+  <bean id="validator" depends-on="validatorFactory" 
+        factory-bean="validatorFactory" factory-method="getValidator"/>
+  <!--  End-Of-Tag: bean-validation -->
+
+
+  <!-- where all business logic is -->
+  <bean id="poc" class="net.ddns.drj7z.poc.beanvalidation.Poc">
+    <property name="validator" ref="validator"/>
+  </bean>
+
+</beans>
