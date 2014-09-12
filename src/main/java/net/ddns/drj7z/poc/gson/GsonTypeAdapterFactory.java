@@ -28,7 +28,6 @@ import com.google.gson.stream.JsonWriter;
  */
 public class GsonTypeAdapterFactory implements TypeAdapterFactory {
 
-  @Override
   public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> typeToken)
   {
     Class<?> rawType= typeToken.getRawType();
