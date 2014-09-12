@@ -56,9 +56,7 @@
   </reporting>
 
   <scm>
-  	<url>https://github.com/drj7z/poc/tree/beanvalidation</url>
-  	<connection>https</connection>
-  	<developerConnection>drj7z</developerConnection>
+  	<url>https://github.com/drj7z/poc.git</url>
   </scm>
   <issueManagement>
   	<url>https://github.com/drj7z/poc/issues</url>
