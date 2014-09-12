@@ -8,7 +8,7 @@
   <packaging>jar</packaging>
 
   <name>gson</name>
-  <url>http://maven.apache.org</url>
+  <url>https://github.com/drj7z/poc/tree/gson</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -32,4 +32,24 @@
 	  <!--  End-Of-Tag: json -->
 
   </dependencies>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.9.1</version>
+      </plugin>
+    </plugins>
+  </reporting>
+    
+  <issueManagement>
+  	<url>https://github.com/drj7z/poc/issues</url>
+  </issueManagement>
+  <organization>
+  	<name>drj7z</name>
+  </organization>
+  <scm>
+  	<url>https://github.com/drj7z/poc.git</url>
+  </scm>
 </project>
