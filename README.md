@@ -104,4 +104,4 @@ Stay tuned.
 
 
 
-[Message Template The Truth]: http://drj7z.github.io/poc/beanvalidation/site/apidocs/net/ddns/drj7z/poc/beanvalidation/MyResourceBundleMessageInterpolator.html
+[Message Template The Truth]: http://drj7z.github.io/poc/poc/beanvalidation/site/apidocs/net/ddns/drj7z/poc/beanvalidation/MyResourceBundleMessageInterpolator.html
