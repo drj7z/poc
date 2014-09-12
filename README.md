@@ -35,7 +35,7 @@ for more information.
 In short:
 define a `org.springframework.validation.beanvalidation.LocalValidatorFactoryBean`
 bean -that detects a bean validation implementation (as hibernate validator 
-is)- and inject a message interpolator bean (see [Interpolation](/#interpolation)).
+is)- and inject a message interpolator bean (see [Interpolation](#interpolation)).
 Then validator can be inject to beans:
 
     <bean id="validator" depends-on="validatorFactory" 
